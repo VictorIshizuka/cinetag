@@ -10,7 +10,7 @@ export function Initial() {
     <>
       <Banner image={home} />
       <Title>
-        <h1>Um lugar para guardar seus vídeos e filmes</h1>
+        <h2>Um lugar para guardar seus vídeos e filmes</h2>
       </Title>
       <Container>
         {videos.map((video, id) => {

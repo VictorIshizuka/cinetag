@@ -3,6 +3,7 @@ import favorite from "../../assets/Rectangle-2.png";
 import { Title } from "components/Title";
 import { useFavoriteContext } from "context/favoriteContext";
 import { Card } from "components/Card";
+import { Container } from "components/Container";
 
 export const Favorite = () => {
   const { isFavorite } = useFavoriteContext();
@@ -10,18 +11,12 @@ export const Favorite = () => {
     <>
       <Banner image={favorite} />
       <Title>
-        <h1>Meus Favoritos</h1>
-        <section
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            paddingBottom: "32px",
-          }}
-        >
+        <h2>Meus Favoritos</h2>
+        <Container>
           {isFavorite.map(favorite => {
             return <Card {...favorite} key={favorite.id} />;
           })}
-        </section>
+        </Container>
       </Title>
     </>
   );
