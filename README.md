@@ -1,11 +1,11 @@
 # Projetinho CineTag  com RCA
 
 ## Estudo:
-Context APi
-React router dom
-Componentização
+Context APi.\
+React router dom.\
+Componentização.\
 modules-css
-db.json
+db.json.\
 
 
 
