@@ -1,6 +1,4 @@
 .isContainer {
   margin: 2em 10em;
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 }

@@ -1,11 +1,14 @@
-import { Header } from "components/Header";
-import { Favorite } from "modules/Favorite";
-import { Initial } from "modules/Initial";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Footer } from "components/Footer/footer";
+
 import { FavoriteProvider } from "context/favoriteContext";
+
+import { Initial } from "modules/Initial";
+import { Favorite } from "modules/Favorite";
 import { FavoriteId } from "modules/FavoriteId";
 import { NotFound } from "modules/NotFound";
+
+import { Header } from "components/Header";
+import { Footer } from "components/Footer/footer";
 
 export const AppRoutes = () => {
   return (

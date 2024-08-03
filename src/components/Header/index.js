@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/Logo-cinetag-branco1.png";
+
 import styles from "./header.module.css";
+
+import logo from "../../assets/Logo-cinetag-branco1.png";
+
 import { HeaderLink } from "./HeaderLink";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="./">
-        <img src={logo} width={170} height={48} alt="" />
+        <img src={logo} alt="logo do cinetag" />
       </Link>
       <nav>
         <HeaderLink url="./">Home</HeaderLink>

@@ -1,9 +1,12 @@
+import videos from "./../../mock/db.json";
+
+import styles from "./inicio.module.css";
+
 import { Title } from "components/Title";
 import { Card } from "components/Card";
-import videos from "./../../mock/db.json";
-import home from "../../assets/Rectangle-1.png";
 import { Banner } from "components/Banner/banner";
-import { Container } from "components/Container";
+
+import home from "../../assets/Rectangle-1.png";
 
 export function Initial() {
   return (
@@ -12,11 +15,11 @@ export function Initial() {
       <Title>
         <h2>Um lugar para guardar seus vídeos e filmes</h2>
       </Title>
-      <Container>
+      <section className={styles.container}>
         {videos.map((video, id) => {
           return <Card {...video} key={id} />;
         })}
-      </Container>
+      </section>
     </>
   );
 }

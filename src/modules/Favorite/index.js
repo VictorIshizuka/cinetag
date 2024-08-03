@@ -1,9 +1,12 @@
-import { Banner } from "components/Banner/banner";
-import favorite from "../../assets/Rectangle-2.png";
-import { Title } from "components/Title";
 import { useFavoriteContext } from "context/favoriteContext";
+
+import styles from "./favorite.module.css";
+
+import { Banner } from "components/Banner/banner";
+import { Title } from "components/Title";
 import { Card } from "components/Card";
-import { Container } from "components/Container";
+
+import favorite from "../../assets/Rectangle-2.png";
 
 export const Favorite = () => {
   const { isFavorite } = useFavoriteContext();
@@ -12,12 +15,12 @@ export const Favorite = () => {
       <Banner image={favorite} />
       <Title>
         <h2>Meus Favoritos</h2>
-        <Container>
-          {isFavorite.map(favorite => {
-            return <Card {...favorite} key={favorite.id} />;
-          })}
-        </Container>
       </Title>
+      <section className={styles.container}>
+        {isFavorite.map(favorite => {
+          return <Card {...favorite} key={favorite.id} />;
+        })}
+      </section>
     </>
   );
 };

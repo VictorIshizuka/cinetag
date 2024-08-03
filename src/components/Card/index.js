@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
+import { useFavoriteContext } from "context/favoriteContext";
+
 import styles from "./card.module.css";
+
 import iconFavorite from "../../assets/favorite.png";
 import iconNotFavorite from "../../assets/favorite_outline.png";
-import { useFavoriteContext } from "context/favoriteContext";
-import { Link } from "react-router-dom";
 
 export const Card = ({ id, banner, title }) => {
   const { addFavorite, isFavorite } = useFavoriteContext();
@@ -11,13 +14,7 @@ export const Card = ({ id, banner, title }) => {
   return (
     <div className={styles.container}>
       <Link className={styles.link} to={`/${id}`}>
-        <img
-          src={banner}
-          className={styles.image}
-          width={282}
-          height={425}
-          alt=""
-        />
+        <img src={banner} className={styles.image} alt={title} />
         <h2 className={styles.title}>{title}</h2>
       </Link>
       <img
@@ -26,7 +23,7 @@ export const Card = ({ id, banner, title }) => {
         onClick={() => {
           addFavorite({ id, banner, title });
         }}
-        alt=""
+        alt="favoritar filme"
       />
     </div>
   );
